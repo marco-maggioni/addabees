@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} - homepage {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos library-->
+{% endblock styles %}
+
+{% block content %}
+  <div class="container logo">
+    <h1 id="logo">_AddaBees_</h1>
+  </div>
+  <h2 id="logo2">Mieli dell'Adda</h2>
+  <hr id="hr_1">
+
+  <div class="container deck-div">
+    <div class="card-deck">
+      <div class="card border-secondary" data-aos="slide-up" data-aos-duration="1000">
+        <img class="card-img-top" src="{% static 'img/bee.jpg' %}" alt="bee image">
+        <div class="card-body">
+          <h5 class="card-title">Le api</h5>
+          <p class="card-text">Il mondo di questo insetto è affascinante e chiunque ne sente parlare rimane stupito di cosa possano fare esseri tanto minuscoli..</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href="/chi_siamo">continua a leggere</a></small>
+        </div>
+      </div>
+      <div class="card border-secondary" data-aos="slide-up" data-aos-duration="1100">
+        <img class="card-img-top" src="{% static 'img/tree.jpg' %}" alt="tree image">
+        <div class="card-body">
+          <h5 class="card-title">L'ambiente</h5>
+          <p class="card-text">Che di mondo a disposizione ne abbiamo uno solo, per fortuna, lo stiamo capendo..</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href="/chi_siamo">continua a leggere</a></small>
+        </div>
+      </div>
+      <div class="card border-secondary" data-aos="slide-up" data-aos-duration="1200">
+        <img class="card-img-top" src="{% static 'img/cup.jpg' %}" alt="cup image">
+        <div class="card-body">
+          <h5 class="card-title">La salute</h5>
+          <p class="card-text">Sono convinto che il detto "siamo quello che mangiamo" sia sempre più vero, soprattutto al giorno d'oggi..</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href="/chi_siamo">continua a leggere</a></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos library-->
+<script>
+  AOS.init();
+</script>
+{% endblock content %}

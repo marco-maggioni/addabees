@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} - gallery {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos library-->
+{% endblock styles %}
+
+{% block content %}
+
+<div class="header text-center" data-aos="slide-up" data-aos-duration="1000">
+  <h1>Da dove deriva il nostro miele?</h1>
+  <h4 style="margin-bottom: 30px;">ecco una selezione dei fiori più comuni su cui si posano le nostre api</h4>
+  <button type="button" id="buttonPic" onclick="piante_scopri_più()">scopri di più</button>
+  <div id="desc_piante" class="container text-center">
+    <p>{{ content }}</p>
+    <button id="close_txt" onclick="piante_scopri_meno()">mostra meno</button>
+  </div>
+  <p id="namePic" style="color: #fff; font-size: 12px;">(clicca su ogni foto per scoprirne il nome)</p>
+</div>
+<div class="rows">
+  <div class="column">
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/aglio_orsino.jpg' %}" alt="aglio orsino" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Aglio Orsino</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+        <img src="{% static 'img/rosmarino.jpg' %}" alt="rosmarino" style="width: 100%;">
+        <div class="overlay">
+          <div class="text">Rosmarino</div>
+        </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+        <img src="{% static 'img/tarassaco.jpg' %}" alt="tarassaco" style="width: 100%;">
+        <div class="overlay">
+          <div class="text">Tarassaco</div>
+        </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+        <img src="{% static 'img/papavero.jpg' %}" alt="papavero" style="width: 100%;">
+        <div class="overlay">
+          <div class="text">Papavero selvatico</div>
+        </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/palma.jpg' %}" alt="palma" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Palma "Trachycarpus fortunei"</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/trifoglio_rosso.jpg' %}" alt="trifoglio rosso" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Trifoglio Rosso</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/biancospino.jpg' %}" alt="biancospino" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Biancospino</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/rovo.jpg' %}" alt="rovo" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Rovo</div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/trifoglio_bianco.jpg' %}" alt="trifoglio bianco" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Trifoglio bianco</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/caco.jpg' %}" alt="caco" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Caco</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/lavanda.jpg' %}" alt="lavanda" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Lavanda</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/camomilla.jpg' %}" alt="camomilla selvatica" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Camomilla selvatica</div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/castagno.jpg' %}" alt="castagno" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Castagno</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/menta.jpg' %}" alt="menta" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Menta</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/girasole.jpg' %}" alt="girasole" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Girasole</div>
+      </div>
+    </div>
+    <div class="contenitore" data-aos="slide-up" data-aos-duration="1000">
+      <img src="{% static 'img/robinia_pseudoacacia.jpg' %}" alt="robinia pseudoacacia" style="width: 100%;">
+      <div class="overlay">
+        <div class="text">Robinia pseudoacacia</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/gallery.js' %}"></script>  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos library-->
+<script>
+  AOS.init();
+</script>
+{% endblock content %}

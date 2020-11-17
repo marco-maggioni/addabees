@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} - chi siamo {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/chi_siamo.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos library-->
+{% endblock styles %}
+
+{% block content %}
+<div class="container text-center header_chi_siamo" data-aos="slide-up" data-aos-duration="1000">
+    <h1 style="color: #fff; font-size: 3.5rem;">Perché "AddaBees"?</h1>
+    <h6 style="color: #fff; font-size: 1.3rem;">L'idea di intraprendere quest'avventura con le api nasce nel lontano 2012 quando, con un amico,
+    fantasticavamo sul come poter cambiare completamente vita. Una delle possibili strade era proprio quella di intraprendere il mestiere dell'apicoltore. 
+    Da allora ne è passata di acqua sotto i ponti ed ognuno di noi ha poi seguito strade ben diverse. <br> Allora non lo avrei mai detto, ma la mia, piccoli passi 
+    alla volta, si è rivelata essere proprio legata a questo mondo.</h6>
+</div>
+<div data-aos="slide-up" data-aos-duration="1000" class="green">
+    <img id="green_bee" src="{% static 'icons/bee_green.png' %}" alt="green bee" data-aos="slide-up" data-aos-duration="1000">
+    <div class="box1 sb1">
+        Le api
+        <hr style="margin-top: 3px; margin-bottom: 3px;">
+        <div class="bubble_text">
+            <p class="bubble">Il mondo di questo insetto è affascinante e chiunque ne sente parlare rimane stupito di cosa possano fare esseri tanto minuscoli.
+                Sembra incredibile ma, il mondo dell'ape è un piccolo ecosistema complesso che ancora oggi non è stato compreso appieno.<br>Una
+                persona comune, per esempio, tende a pensare alla singola ape come un "animale" (passatemi il termine) a se stante, come lo è un gatto
+                o un cane. In realtà questa è una concezione totalmente sbagliata.<br>Una singola ape, lasciata sola, non ha speranze di cavarsela ed anzi,
+                va incontro a morte certa in poche ore. La stessa ape, all'interno del nido, svolge invece ruoli diversi e fondamentali nell'arco della
+                sua breve vita (che dura in media poco più di un mese). Questa idea di vita collettiva dello sciame ha fatto nascere la definizione di
+                "super-organismo", cioè un insieme di più organismi che lavorano in simbiosi per ottenere tutti lo stesso scopo: la sopravvivenza.<br>
+                Ma, di quali compiti è incaricata un'ape durante il suo ciclo vitale? Beh, potremmo pensare che tutte loro svolgano gli stessi compiti
+                sin dalla nascita. Ed invece non è così. Proprio come un uomo, a diverse "età" corrispondono ruoli ed incarichi diversi, se vogliamo, sempre più
+                impegnativi e di importanza fondamentale per la famiglia.<br>Ecco che allora un'ape neonata si uccupa della pulizia della "casa" (ape-spazzina),
+                secerne e modella la cera per creare nuove celle (ape-ceraiola), si occupa della nutrizione della regina (ape-nutrice) per poi passare
+                alla ricerca e raccolta di acqua e cibo (polline e nettare) dopo aver imparato a volare fuori dall'arnia (ape-bottinatrice).<br>
+                E la regina in tutto questo? Una delle domande più frequenti che mi viene posta è: "ma come fanno le api a sciegliere la regina?"
+                Proprio una bella domanda! Cominciamo col dire che, se vi immaginate un'ape con la corona e lo scettro che spadroneggia dando comandi a 
+                destra e a manca, siete fuori strada!<br> In realtà, costituisce fondamentalmente l'apparato riproduttore della colonia, perché l'unica ape in
+                grado di deporre uova feconde per far nascere nuove api. Questo la rende determinante per la riuscita dell'unico vero scopo finale,
+                ricordate?, sopravvivere!<br>
+                Tutte le api avvertono la sua presenza tramite dei feromoni (particolari odori non percettibili dall'uomo) che essa emette e sono indotte
+                a lavorare operosamente per la colonia.
+                Quando, per un qualsiasi motivo, la regina viene a mancare (solitamente per morte improvvisa o sciamatura) le api, non avvertendo più i 
+                feromoni, si sentono "orfane" e si adoperano per la sua sostituzione. Prelevano uno o più uova precedentemente deposte, le nutrono con 
+                pappa reale per l'intera durata dello sviluppo delle larve ed ecco che, dopo pochi giorni, nasce una nuova regina pronta a sostituire 
+                la vecchia. Un particolare interessante (e brutale!): La prima nata va alla ricerca delle eventuali altre celle reali ed uccide le regine 
+                non ancora nate. Salvo rari casi eccezzionali, in una colonia può infatti regnare solo un'ape regina.<br>
+                Dopo essere nata ed essersi assicurata la leadership, esce dall'arnia e compie il cosiddetto "volo nuziale" dove si accoppia
+                con una moltitudine di fuchi (maschi dell'ape) al fine di poter finalmente cominciare a deporre uova. Questa operazione accade solo una
+                sola volta in tutta la sua vita. Una volta tornata infatti nella sua arnia, non si muoverà più da li, se non per creare un nuovo sciame.<br>
+                Dato che l'ho menzionata un paio di volte, mi sembra giusto parlarvi infine della cosideetta sciamatura.
+                Vi sarà magari capiatato in primavera di vedere letteralmente delle palle di api appese a dei rami di alberi o, peggio, nascoste in qualche
+                anfratto di un appartamento, per poi vedere intervenire un apicoltore che, con pazienza e destrezza, recupera le fuggitive e "salva" i 
+                malcapitati residenti della zona. Quella sia chiama in gergo tecnico sciamatura ed avviene quando, in una famiglia molto popolosa e congestionata,
+                la regina decide di andarsene, portando con se una parte della colonia.<br>
+                Ci sarebbero ancora mille spunti e mille argomenti di cui parlare ma con questo mio articolo ho voluto darvi una vaga idea di che 
+                mondo spettacolarmente grande si nasconde dietro la vita di un insetto così piccolo. Spero di esserci riuscito!</p>
+        </div>
+    </div>
+</div>
+<div data-aos="slide-up" data-aos-duration="1000" class="yellow">
+    <img id="yellow_bee" src="{% static 'icons/bee_yellow.png' %}" alt="yellow bee" data-aos="slide-up" data-aos-duration="1000">
+    <div class="box2 sb2">
+        L'ambiente
+        <hr style="margin-top: 3px; margin-bottom: 3px;">
+        <div class="bubble_text">
+            <p class="bubble">Che di mondo a disposizione ne abbiamo uno solo, per fortuna, lo stiamo capendo. Spesso sembra però di stare in un limbo in cui
+                si è consapevoli che stanno avvenendo dei cambiamenti tangibili del clima ma che ancora non si sia abbia la convinzione di dover 
+                modificare alcuni aspetti del nostro modo di vivere per far 'respirare' il pianeta.<br>
+                Purtroppo, lo sappiamo, qualsiasi rivoluzione richiede tempo per essere completata e probabilmente questa in particolare ne richiederà
+                anche di più. Essere in grado di abbandonare i combustibili fossili in favore di carburanti meno inquinanti, diminuire l'uso sconsiderato
+                della plastica, cambiare radicalmente la filiera alimentare rendendoci meno schiavi dell'agricoltura intensiva, sono solo alcuni degli 
+                obiettivi che dovranno essere raggiunti ma che ora sembrano problemi insormontabili.<br>
+                Eppure io rimango fiducioso che si possa arrivare a tanto. Se l'uomo è arrivato a pensare di poter esplorare lo spazio, se può progettare
+                di mettere piede su un altro pianeta, allora può o, meglio, deve essere in grado di compiere questo switch verso la sostenibilità.
+                Voi direte: "si ma, che c'entra tutto ciò con l'apicoltura?" Bene, a mio modo di vedere, le api sono la cartina di tornasole dello stato
+                di salute del mondo e, come ormai tutti sanno, non se la passano proprio bene. A livello globale sono considerate una specie in sofferenza
+                ormai da anni e questa tendenza non sembra cambiare.<br>
+                Come apicoltore mi sta particolarmente a cuore il loro benessere. Vi assicuro che vederle morire, specie per un tuo 
+                errore (si, purtroppo ho pagato l'inesperienza anche in questo modo) lascia davvero l'amaro in bocca. Ecco perché come persona ho
+                un motivo in più per tenere particolarmente all'ambiente in cui vivo. Ecco perché spero che la questione ambiantale venga presa
+                sul serio dalla collettività e che avere cura, rispetto e riguardo per quello che è di tutti e di nessuno allo stesso tempo
+                diventi un'abitudine comune.</p>
+        </div>
+    </div>
+</div>
+<div data-aos="slide-up" data-aos-duration="1000" class="red">
+    <img id="red_bee" src="{% static 'icons/bee_red.png' %}" alt="red bee" data-aos="slide-up" data-aos-duration="1000">
+    <div class="box3 sb3">
+        La salute
+        <hr style="margin-top: 3px; margin-bottom: 3px;">
+        <div class="bubble_text">
+            <p class="bubble">Sono convinto che il detto "siamo quello che mangiamo" sia sempre più vero, soprattutto al giorno d'oggi.<br>
+                Sapreste dirmi da dove vengono i prodotti con cui è stato cucinato il vostro ultimo pranzo? 
+                Solitamente la risposta a questa semplice domanda è negativa. Viviamo infatti in un contesto in cui non conosciamo la provenienza 
+                della maggior parte del cibo che mettiamo in tavola tutti i giorni ed anzi, spesso nemmeno ce ne interessiamo.<br> 
+                Conoscere la marca o il produttore di un alimento non basta per sapere cosa c'è dietro a quel prodotto.
+                Per quel che ne sappiamo, Il grano di cui sono fatti gli spaghetti nel nostro piatto è stato magari coltivato all'estero e per noi è di 
+                fatto inpossibile essere certi della sua qualità, del metodo col quale è stato coltivato, degli antiparassitari utilizzati su di esso ecc.
+                Per questo è sempre importante leggere attentamente l'etichetta di tutti i prodotti alimentari prima di acquistarli.<br>
+                Questa premessa è valida anche e sosprattutto per il miele in quanto saper sceglierne uno di buona qualità è fondamentale per ottenere
+                il massimo dal punto di vista delle sue numerose caratteristiche.<br>
+                Di quali caratteristiche sto parlando? Dunque:<br>
+                <br>Per cominciare, esso è considerato un alimento nutraceutico cioè, in sostanza, un cibo con proprietà curative. Penso che sia capitato a 
+                tutti di svegliarsi la mattina, soprattutto nella brutta stagione, sentendosi raffreddati o con un fastidioso bruciore in gola. Ecco, 
+                in questo caso un cucchiaio di miele allevia il fastidio e da un immediato solievo. Ad esso sono infatti riconosciute capacità antisettiche
+                e decongestionanti.<br>
+                Un'altra proprietà notà è quella antiossidante. La scienza ha dimostrato come i polifenoli siano direttamente collegati all'invecchiamento
+                cellulare e come la loro presenza ne rallenti il processo. Bene. Il miele è un cibo molto ricco di questa sostanza (Ok, so che lo state 
+                pensando ma no, non rimarrete giovani per sempre.. però può di sicuro dare una mano!).<br>
+                Per ultimo ma non ultimo, costituisce un ottimo alleato per tutti gli sportivi. Se assunto prima dell'attività sportiva garantisce un buon 
+                apporto di fruttosio (uno tipo di zucchero che il corpo assimila più lentamente e che quindi dura più a lungo nel nostro organismo), di 
+                calorie (con un rapporto di 300 kilocalorie ogni 100 grammi) e di sali minerali.<br>
+                Tutto cio in un unico alimento. Decisamente niente male, no?<br>
+                Per essere certi di poter contare in maniera ottimale su tutto ciò, non è fondamentale scegliere questo o quel tipo di miele, acacia
+                o millefiori, castagno o tiglio ma piuttosto, come dicevo prima, scieglierne uno di "buona qualità".<br>Quando lo si acquista, specie 
+                se in un supermercato, è sempre bene badare a due aspetti, il costo e la provenienza.<br>
+                Vi potrà capitare di notare sull'etichetta la dicitura "misciela di mieli provenienti da.." che sta a significare che im miele che avete 
+                in mano non arriva da un solo apiario ma da apicolture di zone diverse, tal volta addirittura di paesi diversi.<br>
+                Oppure noterete un attraente costo al chilogrammo davvero irrisorio.<br>
+                La mia opinione in merito (giusta o sbagliata che sia) è che un prodotto di qualità deve avere il suo giusto prezzo. Io credo non 
+                inferiore ai 10 euro al chilogrammo, a salire in base al tipo da voi scelto.<br>
+                Per quanto invece riguarda la provenienza, lascio a voi l'ardua decisione. Il mio consiglio sarà sempre e comunque quello di 
+                diffidare di offerte vantaggiose o di mieli di dubbia provenienza. Rivolgervi direttamente ad un apicoltore, meglio ancora se della 
+                vostra zona, rimane a mio avviso una scelta saggia sia per voi che per chi della cura delle api ne ha fatto un mestiere.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos library-->
+<script>
+  AOS.init();
+</script>
+{% endblock content %}

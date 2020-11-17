@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} - il miele {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/il_miele.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos library-->
+{% endblock styles %}
+
+{% block content %}
+<div class="container text-center header_miele" data-aos="slide-up" data-aos-duration="1000">
+  <h1 style="color: #fff;">Quali mieli produciamo?</h1>
+  <h4 style="color: #fff;">Le nostre api sono "specializzate" nella produzione di 3 tipi di miele, tutti rigorosamente provenienti
+    da fiori e piante che popolano la valle dell'Adda.</h4>
+</div>
+
+<div class="card stile-card text-center" data-aos="slide-up" data-aos-duration="1000">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs justify-content-center">
+      <li class="nav-item">
+        <button id="btn1" class="nav-link active" onclick="openTab('acacia', 'btn1')">Acacia</button>
+      </li>
+      <li class="nav-item">
+        <button id="btn2" class="nav-link" onclick="openTab('millefiori', 'btn2')">Millefiori</button>
+      </li>
+      <li class="nav-item">
+        <button id="btn3" class="nav-link" href="#" onclick="openTab('castagno', 'btn3')">Castagno</button>
+      </li>
+    </ul>
+  </div>
+  <div id="acacia" class="card miele">
+    <div class="card-body" style="color: #cbaa64; background: #030A13;">
+      <h5 class="card-title">Miele di Acacia</h5>
+      <p class="card-text">Forse la più comune tipologia di miele in commercio, assieme al millefiori. In base alla purezza del nettare da cui deriva
+        può assumere sfumature che vanno dal quasi trasparente all'ambrato. Viene definito monofloreale in quanto composto per il 50-70% dallo stesso
+        tipo di nettare, appunto quello della robinia pseudoacacia. Il suo gusto dolce e delicato lo rende adatto sia per essere mangiato così com'è,
+      sia per essere utilizzato nella preparazione dei dolci più disparati.</p>
+      <p class="card-text"><small class="text-muted">Miele monofloreale di acacia</small></p>
+    </div>
+    <img class="card-img-bottom" src="{% static 'img/acacia.jpg' %}" alt="miele di acacia">
+  </div>
+  <div id="millefiori" class="card miele" style="display: none;">
+    <div class="card-body" style="color: #cbaa64; background: #030A13;">
+      <h5 class="card-title">Miele di Millefiori</h5>
+      <p class="card-text">Il suo nome già ne descrive la sua caratteristica principale. Al contrario dell'acacia, il nettare che lo compone non
+        vede la predominanza di un tipo particolare sugli altri ma bensì un miscuglio di nettari diversi. In esso è infatti possibile 
+        riscontrare una concentrazione anche del 20-30% dello stesso nettare, che tuttavia non basta per essere definito monofloreale.</p>
+      <p class="card-text"><small class="text-muted">Miele plurifloreale di millefiori</small></p>
+    </div>
+    <img class="card-img-bottom" src="{% static 'img/millefiori.jpg' %}" alt="miele millefiori">
+  </div>
+  <div id="castagno" class="card miele" style="display: none;">
+    <div class="card-body" style="color: #cbaa64; background: #030A13;">
+      <h5 class="card-title">Miele di Castagno</h5>
+      <p class="card-text">Miele dal classico color marrone scuro che emana un intenso odore aromatico.
+        Non è amato da tutti, forse per via del retrogusto leggermente amaro che pervade la bocca dopo averlo assaggiato. A dispetto di ciò,
+      gli vengono riconosciute proprietà anti-infiammatorie ed anti-batteriche, oltre che l'essere ricco di proteine e di vitamine B e C</p>
+      <p class="card-text"><small class="text-muted">Miele monofloreale di castagno</small></p>
+    </div>
+    <img class="card-img-bottom" src="{% static 'img/miele_castagno.jpg' %}" alt="miele di castagno">
+  </div>
+</div>
+
+<script src="{% static 'js/il_miele.js' %}"></script>  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos library-->
+<script>
+  AOS.init();
+</script>
+{% endblock content %}

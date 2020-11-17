@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="apicoltura addaBees. Apie e miele della valle dell'Adda. Recupero sciami e disinfestazioni vespe e calabroni">
+    <meta name="keywords" content="apicoltura, api, sciami, miele, adda, disinfestazioni, vespe, calabroni">
+    <meta name="author" content="Marco Maggioni">
+    <title>addaBees{% block title %} {% endblock %}</title>
+    <script src="https://kit.fontawesome.com/c5246b900a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    {% block styles %} {% endblock styles %}
+</head>
+
+<body>
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom top-bar nav-no-display">
+    <button id="toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mx-auto" data-target=".navbar-collapse" data-toggle="collapse">
+        <a class="nav-item nav-link menu" style="color: rgba(231, 111, 81, 1);" href="/chi_siamo/">Chi siamo<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link menu" style="color: rgba(231, 111, 81, 1);" href="/il_miele/">Il Miele</a>
+        <a class="nav-item nav-link menu" style="color: rgba(231, 111, 81, 1);" href="/contatti/">Contatti</a>
+        <a class="nav-item nav-link menu" style="color: rgba(231, 111, 81, 1);" href="/gallery/">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  {% include 'cookie_modal.html' %}
+
+  {% block content %} 
+
+  {% endblock content %}
+
+
+<!-------------------------------------FOOTER--------------------------------------------------------->
+  <footer class="footer" id="myFooter">
+    <a class="btn btn-outline-primary btn-lg btn-block" title="Torna alla homepage" href="/">Torna alla homepage</a>
+    <div class="row no-gutters">
+      <div class="col-md-6 col-ft1">
+        <p>Icons credits:</p>
+        <ul>
+          <li>Bee icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>
+        </ul>
+        <p>Cookies policy:</p>
+        <ul>
+          <li>read our <p id="policy" style="color: #0645AD; display: inline;"><u>policy</u></p></li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-ft2">
+        <p>Vorresti un sito come questo? Contattami <a href="https://www.linkedin.com/in/marco-maggioni-752b2a72/"><u>qui</u></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/bees.js' %}"></script> <!--richiamato sempre dopo aver caricato jquery-->
+
+
+</body>
+</html>

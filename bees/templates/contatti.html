@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} - contatti {% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/contatti.css' %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--aos library-->
+{% endblock styles %}
+
+{% block content %}
+<div class="container mb-3 text-center" style="color: #fff; padding-top: 32px; margin-top: 50px;" data-aos="slide-up" data-aos-duration="1000">
+  <h1>Contattaci!</h1>
+  <h4>compila il form e ti risponderemo non appena possibile!</h4>
+</div>
+<div id="contact" class="container" style="margin-top: 50px;">
+  <div class="row">
+    <div class="col-md-6 text-center order-md-1 contacts" data-aos="slide-up" data-aos-duration="1000">
+
+      {% if messages %}
+      {% for message in messages %}
+      <div class=messages>
+        <p class="text-success" style="font-weight: bold; margin-top: 0px; margin-bottom: 0px;">{{ message }}</p>
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      <form method="POST" novalidate>
+        {% csrf_token %} <!--questo tag (token csrf) è obbligatorio per far funzionare il form -->
+        <div class="form-group text-left">
+            {{ form.nome.label_tag }}
+            {{ form.nome }}
+            {% if form.nome.errors %}
+            {% for error in form.nome.errors %}
+            <span class=text-danger>{{ error }}</span>
+            <br>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="form-group text-left">
+            {{ form.cognome.label_tag }}
+            {{ form.cognome }}
+            {% if form.cognome.errors %}
+            {% for error in form.cognome.errors %}
+            <span class=text-danger>{{ error }}</span>
+            <br>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="form-group text-left">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {% if form.email.errors %}
+            {% for error in form.email.errors %}
+            <span class=text-danger>{{ error }}</span>
+            <br>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="form-group text-left">
+            {{ form.messaggio.label }}
+            {{ form.messaggio }}
+            {% if form.messaggio.errors %}
+            {% for error in form.messaggio.errors %}
+            <span class=text-danger>{{ error }}</span>
+            <br>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div id="recaptcha" class="form-group">
+          {{ form.captcha }}
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-sm btn-secondary" value="Invia">
+        </div>
+        <hr id="hr_2">
+      </form>
+    </div>
+    <div class="col-md-6 text-center order-md-2 map" data-aos="slide-up" data-aos-duration="1000">
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10063.599166654949!2d9.445959033547297!3d45.74782267009472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1588669976381!5m2!1sit!2sit" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-3 text-center" style="color: #fff; margin-top: 80px;" data-aos="slide-up" data-aos-duration="1000">
+  <h3>Ti piacciono le api?<br>Seguici sui nostri canali social! @Addabees</h3>
+</div>
+<div class="row" style="margin-right: 0px; margin-top: 30px;">
+  <div class="col-md-6 text-center order-md-1" style="background-color: #3B5998; padding-top: 5px; padding-bottom: 5px;" data-aos="slide-up" data-aos-duration="1000">
+    <a href="https://www.facebook.com/addabees"><i class="fab fa-facebook-f" style="font-size: 40px; color:#fff;"></i></a>
+  </div>
+  <div class="col-md-6 text-center order-md-2" style="background-color: #C13584; padding-top: 5px; padding-bottom: 5px;" data-aos="slide-up" data-aos-duration="1000">
+    <a href="https://www.instagram.com/_addabees_/"><i class="fab fa-instagram" style="font-size: 40px; color:#fff;"></i></a>
+  </div>
+</div>
+
+<script src="{% static 'js/contatti.js' %}"></script>  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--aos library-->
+<script>
+  AOS.init();
+</script>
+{% endblock content %}

@@ -1,0 +1,76 @@
+body {
+    background-color: #e9c46a;
+}
+
+/*-------------------CONTATTI----------------------*/
+
+.yellow {
+    margin: 0px;
+    background-color: #e9c46a;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 250px;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:80%;
+    margin-top: 33px;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.map {
+    padding-left: 3px;
+    padding-right: 0px;
+}
+
+.contacts {
+    padding-left: 0px;
+    padding-right: 3px;
+}
+
+#hr_2 {
+    display: none;
+}
+
+.messages {
+    background-color: #d3d3d3;
+    border: 1px solid #1a936f;
+    border-radius: 3px;
+    margin-top: 5px; 
+    margin-bottom: 10px;
+}
+
+/*------------------------------------------------------------------media queries------------------------------------------------------------*/
+
+@media (max-width: 576px) {
+    .yellow {
+        margin: 0px;
+        background-color: #e9c46a;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .map-responsive{
+        margin-top: 0px;
+    }
+    .map {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .contacts {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #hr_2 {
+        display: block;
+    }
+}

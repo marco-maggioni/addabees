@@ -15,20 +15,23 @@ def contatti(request):
     if request.method == "POST":
         form = Contactform(request.POST)
         if form.is_valid():
-            nome = str(form.cleaned_data["nome"]) + " " + str(form.cleaned_data["cognome"])
-            indirizzo = str(form.cleaned_data["email"])
-            sbjt = nome + " send you a message via Addabees"
-            text = "message from: " + indirizzo + "\n\n" + "text:" + "\n" + str(form.cleaned_data["messaggio"])
-            send_mail(
-                subject=sbjt,
-                message=text,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=["m.maggio88@gmail.com"],
-                fail_silently=False
-            )
-            form = Contactform()
-            messages.add_message(request, messages.SUCCESS, "Il tuo messaggio è stato inviato correttamente. Grazie!")
-            return render(request, 'contatti.html', {"form" : form})
+            try:
+                nome = str(form.cleaned_data["nome"]) + " " + str(form.cleaned_data["cognome"])
+                indirizzo = str(form.cleaned_data["email"])
+                sbjt = nome + " send you a message via Addabees"
+                text = "message from: " + indirizzo + "\n\n" + "text:" + "\n" + str(form.cleaned_data["messaggio"])
+                send_mail(
+                    subject=sbjt,
+                    message=text,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=["m.maggio88@gmail.com"],
+                    fail_silently=False
+                )
+                form = Contactform()
+                messages.add_message(request, messages.SUCCESS, "Il tuo messaggio è stato inviato correttamente. Grazie!")
+                return render(request, 'contatti.html', {"form" : form})
+            except Exception as e:
+                return render(request, "550.html")
     else:
         form = Contactform()
 

@@ -137,6 +137,7 @@ STATICFILE_DIRS = [
 RECAPTCHA_PUBLIC_KEY = os.environ.get("RC_SITE_KEY")
 RECAPTCHA_PRIVATE_KEY = os.environ.get("RC_SECRET_KEY")
 #https://www.shellhacks.com/windows-set-environment-variable-cmd-powershell/
+#https://mcpmag.com/articles/2019/03/28/environment-variables-in-powershell.aspx
 
 
 

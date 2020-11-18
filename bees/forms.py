@@ -20,19 +20,25 @@ class Contactform(forms.Form):
         dati = self.cleaned_data["nome"]
         if dati == "":
             raise ValidationError("Campo obbligatorio")
+        return dati
 
     def clean_cognome(self):
         dati = self.cleaned_data["cognome"]
         if dati == "":
             raise ValidationError("Campo obbligatorio")
+        return dati
 
     def clean_email(self):
         dati = self.cleaned_data["email"]
         if dati == "":
             raise ValidationError("Campo obbligatorio")
+        return dati
 
     def clean_messaggio(self):
         dati = self.cleaned_data["messaggio"]
         if dati == "":
             raise ValidationError("Campo obbligatorio")
+        return dati
+
+#https://docs.djangoproject.com/en/3.1/ref/forms/validation/#:~:text=The%20clean()%20method%20on,and%20that%20error%20is%20raised.
 

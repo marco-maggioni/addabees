@@ -139,5 +139,16 @@ RECAPTCHA_PRIVATE_KEY = os.environ.get("RC_SECRET_KEY")
 #https://www.shellhacks.com/windows-set-environment-variable-cmd-powershell/
 #https://mcpmag.com/articles/2019/03/28/environment-variables-in-powershell.aspx
 
+#send email via sendgrid:
+SENDGRID_API_KEY = os.environ.get('ADDABEES_API_KEY')
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = os.environ.get('ADDABEES_FROM_EMAIL')
+DEFAULT_TO_EMAIL = os.environ.get('ADDABEES_TO_EMAIL')
+#https://sendgrid.com/docs/for-developers/sending-email/django/
+
 
 

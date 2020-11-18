@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
+#from addabees.settings import DEFAULT_TO_EMAIL
 
 from .forms import Contactform
 
@@ -24,7 +25,7 @@ def contatti(request):
                     subject=sbjt,
                     message=text,
                     from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=["m.maggio88@gmail.com"],
+                    recipient_list=['m.maggio88@gmail.com'],
                     fail_silently=False
                 )
                 form = Contactform()

@@ -16,7 +16,8 @@
   <h4 style="margin-bottom: 30px;">ecco una selezione dei fiori più comuni su cui si posano le nostre api</h4>
   <button type="button" id="buttonPic" onclick="piante_scopri_più()">scopri di più</button>
   <div id="desc_piante" class="container text-center">
-    <p>{{ content }}</p>
+    {% load markdownify %}
+    {{ content |markdownify }}
     <button id="close_txt" onclick="piante_scopri_meno()">mostra meno</button>
   </div>
   <p id="namePic" style="color: #fff; font-size: 12px;">(clicca su ogni foto per scoprirne il nome)</p>

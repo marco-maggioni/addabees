@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'bees',
-    'captcha'
+    'captcha',   #https://pypi.org/project/django-recaptcha/
+    'markdownify',  #https://django-markdownify.readthedocs.io/en/latest/install_and_usage.html
 ]
 
 MIDDLEWARE = [
@@ -149,6 +150,23 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = os.environ.get('ADDABEES_FROM_EMAIL')
 DEFAULT_TO_EMAIL = os.environ.get('ADDABEES_TO_EMAIL')
 #https://sendgrid.com/docs/for-developers/sending-email/django/
+
+
+#settings for markdown:
+MARKDOWNIFY_WHITELIST_TAGS = [
+    'a',
+    'abbr',
+    'acronym',
+    'b',
+    'blockquote',
+    'em',
+    'i',
+    'li',
+    'ol',
+    'p',
+    'strong',
+    'ul'
+]
 
 
 

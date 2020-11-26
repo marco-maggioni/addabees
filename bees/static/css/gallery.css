@@ -34,7 +34,12 @@ body {
 #desc_piante {
     display: none;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+strong {
+    font-size: larger;
+    color: gold;
 }
 
 #close_txt {

@@ -23,8 +23,9 @@ html, body {
 }
 
 .logo {
-    height: 310px;
-    width: 310px;
+    background-color: #fff;
+    height: 330px;
+    width: 330px;
     display: flex;
     justify-content: center;
 	text-align: center;

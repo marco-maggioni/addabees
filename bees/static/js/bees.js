@@ -1,3 +1,30 @@
+//script per settare l'height dei card decks
+if (window.attachEvent) {
+   window.attachEvent('onresize', function() {
+      screenHeight = screen.height;
+      topOffset = document.getElementsByClassName('logo')[0].offsetTop;
+      elem_height = document.getElementsByClassName('logo')[0].offsetHeight;
+      total_height = topOffset + elem_height
+      marginT = screenHeight - total_height
+      console.log(marginT)
+      document.getElementById('logo2').style.marginTop = marginT
+   })
+ } else if (window.addEventListener) {
+   window.addEventListener('resize', function() {
+      screenHeight = screen.height;
+      topOffset = document.getElementsByClassName('logo')[0].offsetTop;
+      elem_height = document.getElementsByClassName('logo')[0].offsetHeight;
+      total_height = topOffset + elem_height
+      marginT = screenHeight - total_height
+      console.log(marginT)
+      document.getElementById('logo2').style.marginTop = marginT
+   }, true);
+ } else {
+   //The browser does not support Javascript event binding
+ }
+
+
+
 //query per gestire il modal della cookie policy
 $(document).ready(function(){
     var cook1 = getCookie()

@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+#importo python-dotenv
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("ADDA_SECRET")
+SECRET_KEY = os.getenv("ADDA_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -135,20 +139,20 @@ STATICFILE_DIRS = [
 ]
 
 #KEYS FOR RECAPTCHA
-RECAPTCHA_PUBLIC_KEY = os.environ.get("RC_SITE_KEY")
-RECAPTCHA_PRIVATE_KEY = os.environ.get("RC_SECRET_KEY")
+RECAPTCHA_PUBLIC_KEY = os.getenv("RC_SITE_KEY")
+RECAPTCHA_PRIVATE_KEY = os.getenv("RC_SECRET_KEY")
 #https://www.shellhacks.com/windows-set-environment-variable-cmd-powershell/
 #https://mcpmag.com/articles/2019/03/28/environment-variables-in-powershell.aspx
 
 #send email via sendgrid:
-SENDGRID_API_KEY = os.environ.get('ADDABEES_API_KEY')
+SENDGRID_API_KEY = os.getenv('ADDABEES_API_KEY')
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
 EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = os.environ.get('ADDABEES_FROM_EMAIL')
-DEFAULT_TO_EMAIL = os.environ.get('ADDABEES_TO_EMAIL')
+DEFAULT_FROM_EMAIL = os.getenv('ADDABEES_FROM_EMAIL')
+DEFAULT_TO_EMAIL = os.getenv('ADDABEES_TO_EMAIL')
 #https://sendgrid.com/docs/for-developers/sending-email/django/
 
 
